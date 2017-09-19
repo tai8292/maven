@@ -14,29 +14,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-myquery-plugin</artifactId>
-        <version>1.0</version>
-        <configuration>
-          <url>http://www.foobar.com/query</url>
-          <timeout>10</timeout>
-          <options>
-            <option>one</option>
-            <option>two</option>
-            <option>three</option>
-          </options>
-        </configuration>
-      </plugin>
+<plugins>
+
 </plugins>
 </build>
   <dependencies>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-dependency-plugin</artifactId>
-    <version>3.0.2</version>
-</dependency>
+
 
     <dependency>
       <groupId>junit</groupId>
