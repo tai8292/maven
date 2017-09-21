@@ -4,10 +4,18 @@ package tantai;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main(final String[] args )
-    {
-        System.out.println( "Hello World!" );
+public final class App {
+/**
+ * Hello world!
+ * Constructor
+ */
+    private App() {
+    }
+/**
+ * Hello world!
+ *@param args is args
+ */
+    public static void main(final String[] args) {
+        System.out.println("Hello World!");
     }
 }
