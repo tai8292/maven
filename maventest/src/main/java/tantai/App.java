@@ -22,9 +22,9 @@ public final class App {
  */
     public static void main(final String[] args) {
         App r = new App();
-	LocalTime currentTime = new LocalTime();
-	System.out.println("The current local time is: " + currentTime);
-	Greeter greeter = new Greeter();
-	System.out.println(greeter.sayHello()); 
+        LocalTime currentTime = new LocalTime();
+        System.out.println("The current local time is: " + currentTime);
+        Greeter greeter = new Greeter();
+        System.out.println(greeter.sayHello());
     }
 }
