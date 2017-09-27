@@ -14,4 +14,13 @@ public final class Greeter {
     public String sayHello() {
         return "Hello world!";
     }
+/**
+ *
+ * SayGoodbye.
+ *
+ *
+ */
+    public void sayGoodbye() {
+         System.out.println("Goodbye");
+    }
 }

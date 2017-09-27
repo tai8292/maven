@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/tantai/Documents/maven/maventest/src/main/java/tantai/SayHello.java">
+</file>
+<file name="/home/tantai/Documents/maven/maventest/src/main/java/tantai/App.java">
+</file>
+<file name="/home/tantai/Documents/maven/maventest/src/main/java/tantai/GreetingMojo.java">
+</file>
+<file name="/home/tantai/Documents/maven/maventest/src/main/java/tantai/package-info.java">
+</file>
+<file name="/home/tantai/Documents/maven/maventest/src/main/java/tantai/Greeter.java">
+</file>
+</checkstyle>
