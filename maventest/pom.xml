@@ -16,6 +16,7 @@
 <build>
        <plugins>
           <!-- include dependency to file jar -->
+          <!--
            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -29,7 +30,7 @@
                     </execution>
                 </executions>
             </plugin> 
-          
+          -->
       <plugin>
       <!-- Build an executable JAR -->
       <groupId>org.apache.maven.plugins</groupId>
@@ -40,7 +41,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>tantai.App</mainClass>
+            <mainClass>tantai.App</mainClass>       
           </manifest>
         </archive>
       </configuration>
@@ -62,6 +63,13 @@
         </plugins>
     </build>
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>6.0.6</version>
+</dependency>
+
 <dependency>  
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
@@ -73,8 +81,7 @@
     <artifactId>commons-lang</artifactId>
     <version>2.6</version>
 </dependency>
-
-
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
       <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
