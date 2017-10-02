@@ -33,5 +33,6 @@ public final class App {
 
         Greeter greeter = new Greeter();
         greeter.sayGoodbye();
+        System.out.println(greeter.sayHello());
     }
 }
