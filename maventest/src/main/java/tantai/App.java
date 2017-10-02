@@ -29,5 +29,8 @@ public final class App {
         System.out.println("The current local time is: " + currentTime);
         Date date = new Date();
         System.out.println("The date: " + date);
+
+        Greeter greeter = new Greeter();
+        System.out.println(greeter.sayHello());
     }
 }
