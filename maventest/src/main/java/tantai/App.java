@@ -26,6 +26,7 @@ public final class App {
         LocalTime currentTime = new LocalTime();
         LocalDate currentDate = new LocalDate();
         System.out.println("The current local date is: " + currentDate);
+        System.out.println("The current local time is: " + currentTime);
         Date date = new Date();
         System.out.println("The date: " + date);
     }
