@@ -14,7 +14,7 @@ public final class App {
  */
     private App() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Input a: ");
+        System.out.print("Input a: ");
         int a = in.nextInt();
         System.out.println(a);
     }
@@ -23,6 +23,7 @@ public final class App {
  *@param args is
  */
     public static void main(final String[] args) {
+        App app = new App();
         LocalTime currentTime = new LocalTime();
         LocalDate currentDate = new LocalDate();
         System.out.println("The current local date is: " + currentDate);
