@@ -1,10 +1,9 @@
 package tantai;
 
-public class SayHello implements Say
+public class SayHello
 {
-
-	public void Say()
+	public void say()
 	{
-		System.out.println("Hello");
+		System.out.println("Hello world");
 	}
 }

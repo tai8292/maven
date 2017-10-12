@@ -1,26 +1,30 @@
 package tantai;
+import javax.annotation.Resource;
 
 public class Learn
 {
-	private Say say;
+	@Resource(name= "goodbye1")
+	private SayGoodbye sayGoodbye;
 
 	public Learn()
 	{
-		
+
 	}
 
-	public Learn(Say say)
+	public Learn(SayGoodbye sayGoodbye)
 	{
-		this.say = say;
+		this.sayGoodbye = sayGoodbye;
 	}
 
-	public void setSay(Say say)
+	public void setSayGoodbye(SayGoodbye sayGoodbye)
 	{
-		this.say = say;
+		this.sayGoodbye = sayGoodbye;
 	}
 
-	public void Say()
+	public void printMessage1()
 	{
-		this.say.Say();
+		System.out.println("Message : "+sayGoodbye.getMessage1());
 	}
+
+	
 }
