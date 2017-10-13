@@ -1,7 +1,14 @@
 package tantai;
 
-public interface Say
+public class Say
 {
+	public void start()
+	{
+		System.out.println("Start ==========");
+	}
 
-	public void Say();
+	public void done()
+	{
+		System.out.println("Done ==========");
+	}
 }

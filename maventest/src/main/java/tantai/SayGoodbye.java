@@ -20,6 +20,7 @@ public class SayGoodbye
 	
 	public String getMessage1()
 	{
+		System.out.println("Message 1: "+message1);
 		return message1;
 	}
 }

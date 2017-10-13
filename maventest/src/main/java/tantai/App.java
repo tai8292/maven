@@ -1,6 +1,6 @@
 package tantai;
 
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public final class App {
@@ -8,11 +8,21 @@ public final class App {
 
     public static void main(final String[] args) {
         
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
       
-      CustomEventPublisher cvp = (CustomEventPublisher) context.getBean("customEventPublisher");
-      
-      cvp.publish();  
-      cvp.publish();
+        Student student = (Student) context.getBean("student");
+
+        System.out.println("=========================");
+
+ //       student.printName();
+ //       System.out.println("*************************");
+        student.getAge();
+//        student.printThrowException();
+        System.out.println("=========================");
+
+        SayGoodbye goodbye = (SayGoodbye) context.getBean("goodbye");
+        goodbye.getMessage1();
+//        Say say = (Say) context.getBean("say");
+//        say.sayGoodbye();
     }
 }
