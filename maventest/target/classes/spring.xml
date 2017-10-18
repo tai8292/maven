@@ -9,13 +9,13 @@
 
    <aop:aspectj-autoproxy/>
 
-   <aop:config>
+ <!--  <aop:config>
       <aop:aspect id = "log" ref = "logging">
          <aop:pointcut id = "selectAll" 
             expression = "execution(* tantai.*.*(..))"/>
          
          <aop:before pointcut-ref = "selectAll" method = "beforeAdvice"/>
-    <!--     <aop:after pointcut-ref = "selectAll" method = "afterAdvice"/>  -->
+         <aop:after pointcut-ref = "selectAll" method = "afterAdvice"/>  
          <aop:after-returning pointcut-ref = "selectAll" 
             returning = "retVal" method = "afterReturningAdvice"/> 
          
@@ -23,30 +23,16 @@
             throwing = "ex" method = "AfterThrowingAdvice"/>
       </aop:aspect>
    </aop:config>
-
-   <aop:config>
-      <aop:aspect id = "log2" ref = "say">
-         <aop:pointcut id = "selectAll1" 
-            expression = "execution(* tantai.*.*(..))"/>
-         
-         <aop:before pointcut-ref = "selectAll1" method = "start"/>
-         <aop:after pointcut-ref = "selectAll1" method = "done"/>
-
-      </aop:aspect>
-   </aop:config>
-
-   <!-- Definition for student bean -->
-   <bean id = "student" class = "tantai.Student">
-      <property name = "name" value = "Zara" />
-      <property name = "age" value = "11"/>      
+-->
+<bean id="dataSource" 
+      class = "org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name = "driverClassName" value = "com.mysql.jdbc.Driver"/>
+      <property name = "url" value = "jdbc:mysql://localhost:3306/TEST"/>
+      <property name = "username" value = "root"/>
+      <property name = "password" value = "tttn101"/>
    </bean>
 
-   <bean id="goodbye" class="tantai.SayGoodbye">
-   		<property name="message1" value="Good bye 1" />
+   <bean id="studentJDBCTemplate" class="tantai.StudentJDBCTemplate" scope="prototype">
    </bean>
 
-   <!-- Definition for logging aspect -->
-   <bean id = "logging" class = "tantai.Logging"/> 
-   <bean id="say"  class="tantai.Say"/>
-      
 </beans>

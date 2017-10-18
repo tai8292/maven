@@ -1,9 +1,12 @@
 tantai/Learn.class
 tantai/Student.class
 tantai/CustomEvent.class
+tantai/Logging.class
+tantai/CustomEventPublisher.class
+tantai/StudentDAO.class
+tantai/StudentJDBCTemplate.class
+tantai/StudentMapper.class
 tantai/App.class
 tantai/CustomEventHandler.class
-tantai/Logging.class
 tantai/SayGoodbye.class
 tantai/Say.class
-tantai/CustomEventPublisher.class

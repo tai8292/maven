@@ -2,27 +2,30 @@ package tantai;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import javax.sql.DataSource;
+
+import java.util.List;
 
 public final class App {
 
 
     public static void main(final String[] args) {
-        
+
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-      
-        Student student = (Student) context.getBean("student");
 
-        System.out.println("=========================");
 
- //       student.printName();
- //       System.out.println("*************************");
-        student.getAge();
-//        student.printThrowException();
-        System.out.println("=========================");
+        StudentJDBCTemplate studentJDBCTemplate =(StudentJDBCTemplate)context.getBean("studentJDBCTemplate");
 
-        SayGoodbye goodbye = (SayGoodbye) context.getBean("goodbye");
-        goodbye.getMessage1();
-//        Say say = (Say) context.getBean("say");
-//        say.sayGoodbye();
+        DataSource dataSource = (DataSource)context.getBean("dataSource");
+
+        studentJDBCTemplate.setDataSource(dataSource);
+
+        studentJDBCTemplate.create("a", 10);
+
+        System.out.println("=================");
+        StudentJDBCTemplate studentJDBCTemplate1 =(StudentJDBCTemplate)context.getBean("studentJDBCTemplate");
+        studentJDBCTemplate1.create("b",20);
+
+
     }
 }
