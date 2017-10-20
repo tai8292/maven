@@ -1,14 +1,20 @@
 package tantai;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import javax.annotation.Resource;
 
 public class Learn
 {
-	@Resource(name= "goodbye1")
-	private SayGoodbye sayGoodbye;
+	@Autowired
+	@Qualifier("sayGoodbye")
+	public SayGoodbye sayGoodbye;
 
 	public Learn()
 	{
-
+		System.out.println("Inside TextEditor constructor 1." );
 	}
 
 	public Learn(SayGoodbye sayGoodbye)
@@ -23,8 +29,14 @@ public class Learn
 
 	public void printMessage1()
 	{
+		System.out.println("Message : "+(sayGoodbye == null));
 		System.out.println("Message : "+sayGoodbye.getMessage1());
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Learn{" +
+				"sayGoodbye=" + sayGoodbye +
+				'}';
+	}
 }
