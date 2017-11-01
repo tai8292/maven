@@ -35,6 +35,16 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>spring-libs-release</id>
+      <name>Spring Releases</name>
+      <url>https://repo.spring.io/libs-release</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

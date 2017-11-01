@@ -11,7 +11,7 @@ public class Student {
    private Integer age;
    private String name;
    @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Integer id;
 
    public Student() {
