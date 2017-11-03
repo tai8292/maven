@@ -5,7 +5,7 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
-    <persistence-unit name="Eclipselink_JPA" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="Student" transaction-type="RESOURCE_LOCAL">
 
         <class>tantai.Student</class>
         <class>tantai.Class</class>
@@ -14,9 +14,26 @@
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value="tttn101"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+    <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="Staff" transaction-type="RESOURCE_LOCAL">
+
+        <class>tantai.entity.Staff</class>
+        <class>tantai.entity.TeachingStaff</class>
+        <class>tantai.entity.NonTeachingStaff</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/TEST"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="tttn101"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="eclipselink.logging.level" value="FINE"/>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
         </properties>
-
     </persistence-unit>
+
+
+
 </persistence>

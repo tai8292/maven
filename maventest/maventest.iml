@@ -14,8 +14,8 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="Eclipselink_JPA" />
+          <factory-entry name="Staff" />
           <factory-entry name="datasource" />
-          <factory-entry name="emfBean" value="dataSource" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
